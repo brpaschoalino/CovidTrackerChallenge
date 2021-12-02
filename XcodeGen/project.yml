@@ -1,0 +1,19 @@
+name: iOSChallenge
+options:
+  bundleIdPrefix: com.brp
+  deploymentTarget:
+    iOS: 13.0
+targets:
+  XcodeGenSample:
+    type: application
+    platform: iOS
+    sources: 
+      - path: iOSChallenge
+    scheme:
+      testTargets:
+      - XcodeGenSampleTests
+  XcodeGenSampleTests:
+    type: bundle.unit-test
+    platform: iOS
+    sources:
+      - path: iOSChallengeTests
