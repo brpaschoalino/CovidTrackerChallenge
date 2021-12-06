@@ -30,4 +30,16 @@ extension Storyboarded where Self: UIViewController {
         let storyboard = UIStoryboard(name: "RegisterStoryBoard", bundle: Bundle.main)
         return storyboard.instantiateViewController(withIdentifier: id) as! Self
     }
+
+    static func instantiateMenuStoryBoard() -> Self {
+        let id = String(describing: self)
+        let storyboard = UIStoryboard(name: "MenuStoryBoard", bundle: Bundle.main)
+        return storyboard.instantiateViewController(withIdentifier: id) as! Self
+    }
+    
+    static func instantiateFeedMenuStoryBoard() -> Self {
+        let id = String(describing: self)
+        let storyboard = UIStoryboard(name: "FeedMenuStoryBoard", bundle: Bundle.main)
+        return storyboard.instantiateViewController(withIdentifier: id) as! Self
+    }
 }

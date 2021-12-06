@@ -15,10 +15,10 @@ class MainMenuViewController: UIViewController, Storyboarded {
     }
 
     @IBAction func loginButtonTapped(_ sender: Any) {
-        coordinator?.tappedLogin()
+        coordinator?.goToLogin()
     }
 
     @IBAction func registerButtonTapped(_ sender: Any) {
-        coordinator?.tappedRegister()
+        coordinator?.goToRegister()
     }
 }

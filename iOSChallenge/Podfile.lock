@@ -1,20 +1,28 @@
 PODS:
-  - SwiftLint (0.45.0)
+  - KeychainSwift (19.0.0)
+  - SnapshotTesting (1.9.0)
+  - SwiftLint (0.45.1)
   - Swinject (2.8.1)
 
 DEPENDENCIES:
+  - KeychainSwift
+  - SnapshotTesting
   - SwiftLint
   - Swinject
 
 SPEC REPOS:
   https://github.com/CocoaPods/Specs.git:
+    - KeychainSwift
+    - SnapshotTesting
     - SwiftLint
     - Swinject
 
 SPEC CHECKSUMS:
-  SwiftLint: e5c7f1fba68eccfc51509d5b2ce1699f5502e0c7
+  KeychainSwift: a06190cf933ad46b1e0abc3d77d29c06331715c7
+  SnapshotTesting: 6141c48b6aa76ead61431ca665c14ab9a066c53b
+  SwiftLint: 06ac37e4d38c7068e0935bb30cda95f093bec761
   Swinject: 97112918bd7e0785dc2df7036213f3c8cbba6586
 
-PODFILE CHECKSUM: 021f60a1fcd83ad3ed4bab7bc5a86f44259df3ea
+PODFILE CHECKSUM: 0ee742eb1792cb8fae52eaa0031acbe6e7dce9ec
 
 COCOAPODS: 1.9.3

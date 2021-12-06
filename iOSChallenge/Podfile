@@ -1,18 +1,21 @@
 # Uncomment the next line to define a global platform for your project
 source 'https://github.com/CocoaPods/Specs.git'
-platform :ios, '9.0'
+platform :ios, '15.0'
 
 target 'XcodeGenSample' do
   # Comment the next line if you don't want to use dynamic frameworks
   use_frameworks!
+
+  pod 'SwiftLint'
+  pod 'Swinject'
+  pod 'KeychainSwift'
 
   # Pods for XcodeGenSample
 
   target 'XcodeGenSampleTests' do
     inherit! :search_paths
     # Pods for testing
-    pod 'SwiftLint'
-    pod 'Swinject'
+    pod 'SnapshotTesting'
   end
 
 end
