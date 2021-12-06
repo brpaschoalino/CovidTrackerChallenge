@@ -22,16 +22,23 @@ class MainCoordinator: Coordinator {
         navigationController.pushViewController(vc, animated: false)
     }
 
-    func tappedLogin() {
+    func goToLogin() {
         let vc = LoginViewController.instantiateLoginStoryBoard()
         vc.coordinator = self
         navigationController.pushViewController(vc, animated: true)
 
     }
 
-    func tappedRegister() {
+    func goToRegister() {
         let vc = RegisterViewController.instantiateRegisterStoryBoard()
         vc.coordinator = self
         navigationController.pushViewController(vc, animated: true)
+    }
+
+    func goToFeedMenu() {
+        let vc = FeedMenuViewController.instantiateFeedMenuStoryBoard()
+        vc.coordinator = self
+        navigationController.pushViewController(vc, animated: true)
+
     }
 }

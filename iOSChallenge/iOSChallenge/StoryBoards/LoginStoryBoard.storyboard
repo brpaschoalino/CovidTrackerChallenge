@@ -22,8 +22,8 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PYL-aU-Rux">
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="818"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="1000" ambiguous="YES" text="Login" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="avx-Of-uSp">
-                                                <rect key="frame" x="24" y="109" width="366" height="28"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="1000" text="Login" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="avx-Of-uSp">
+                                                <rect key="frame" x="24" y="109" width="366" height="29"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
@@ -31,8 +31,8 @@
                                                     <fontDescription key="fontDescription" type="system" pointSize="26"/>
                                                 </variation>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="1000" ambiguous="YES" text="EMAIL ADDRESS" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BnI-if-M8T">
-                                                <rect key="frame" x="24" y="153" width="366" height="13"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="1000" text="EMAIL ADDRESS" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BnI-if-M8T">
+                                                <rect key="frame" x="24" y="154" width="366" height="18"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                                 <color key="textColor" red="0.2901960784" green="0.2901960784" blue="0.2901960784" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
@@ -40,17 +40,13 @@
                                                     <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                                 </variation>
                                             </label>
-                                            <textField opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bsP-ER-vP7" customClass="MCTextField" customModule="CEP_Consumer" customModuleProvider="target">
-                                                <rect key="frame" x="24" y="167" width="366" height="34"/>
-                                                <accessibility key="accessibilityConfiguration" identifier="LoginControllerEmailTextField"/>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bsP-ER-vP7">
+                                                <rect key="frame" x="24" y="173" width="366" height="34"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                                 <textInputTraits key="textInputTraits"/>
-                                                <userDefinedRuntimeAttributes>
-                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="passwordTextField" value="NO"/>
-                                                </userDefinedRuntimeAttributes>
                                             </textField>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="1000" ambiguous="YES" text="PASSWORD" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dI1-bO-sh4">
-                                                <rect key="frame" x="24" y="223" width="366" height="13"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="1000" text="PASSWORD" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dI1-bO-sh4">
+                                                <rect key="frame" x="24" y="229" width="366" height="18"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                                 <color key="textColor" red="0.2901960784" green="0.2901960784" blue="0.2901960784" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
@@ -58,14 +54,21 @@
                                                     <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                                 </variation>
                                             </label>
-                                            <textField opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="1G7-b6-WhA" customClass="MCTextField" customModule="CEP_Consumer" customModuleProvider="target">
-                                                <rect key="frame" x="24" y="237" width="366" height="34"/>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="1G7-b6-WhA">
+                                                <rect key="frame" x="24" y="248" width="366" height="34"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                                <textInputTraits key="textInputTraits"/>
-                                                <userDefinedRuntimeAttributes>
-                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="passwordTextField" value="YES"/>
-                                                </userDefinedRuntimeAttributes>
+                                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                                             </textField>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="p92-tC-1ZW">
+                                                <rect key="frame" x="159" y="387" width="96" height="50"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" title="Login">
+                                                    <fontDescription key="titleFontDescription" type="system" pointSize="30"/>
+                                                </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="didTapLogin:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="0lI-HB-Ze2"/>
+                                                </connections>
+                                            </button>
                                         </subviews>
                                         <color key="backgroundColor" red="0.94117647059999998" green="0.94117647059999998" blue="0.94117647059999998" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
@@ -75,13 +78,16 @@
                                             <constraint firstAttribute="trailing" secondItem="dI1-bO-sh4" secondAttribute="trailing" constant="24" id="AoL-TV-yuQ"/>
                                             <constraint firstItem="bsP-ER-vP7" firstAttribute="leading" secondItem="PYL-aU-Rux" secondAttribute="leading" constant="24" id="BPQ-nl-Dai"/>
                                             <constraint firstItem="1G7-b6-WhA" firstAttribute="top" secondItem="dI1-bO-sh4" secondAttribute="bottom" constant="1" id="Gw0-jA-j9y"/>
+                                            <constraint firstItem="p92-tC-1ZW" firstAttribute="top" secondItem="1G7-b6-WhA" secondAttribute="bottom" constant="105" id="Mdx-RQ-ehO"/>
                                             <constraint firstItem="avx-Of-uSp" firstAttribute="leading" secondItem="PYL-aU-Rux" secondAttribute="leading" constant="24" id="Nar-Uo-qOe"/>
                                             <constraint firstItem="dI1-bO-sh4" firstAttribute="top" secondItem="bsP-ER-vP7" secondAttribute="bottom" constant="22" id="RIP-5x-JpN"/>
                                             <constraint firstAttribute="trailing" secondItem="BnI-if-M8T" secondAttribute="trailing" constant="24" id="Trj-tC-3fC"/>
                                             <constraint firstItem="bsP-ER-vP7" firstAttribute="top" secondItem="BnI-if-M8T" secondAttribute="bottom" constant="1" id="Tzj-Ea-CFp"/>
                                             <constraint firstAttribute="trailing" secondItem="avx-Of-uSp" secondAttribute="trailing" constant="24" id="Yvr-ok-HPN"/>
                                             <constraint firstAttribute="trailing" secondItem="bsP-ER-vP7" secondAttribute="trailing" constant="24" id="cUr-uY-BAx"/>
+                                            <constraint firstItem="p92-tC-1ZW" firstAttribute="centerX" secondItem="1G7-b6-WhA" secondAttribute="centerX" id="cZM-iY-oc6"/>
                                             <constraint firstItem="1G7-b6-WhA" firstAttribute="leading" secondItem="PYL-aU-Rux" secondAttribute="leading" constant="24" id="hg0-R1-glQ"/>
+                                            <constraint firstItem="avx-Of-uSp" firstAttribute="top" secondItem="PYL-aU-Rux" secondAttribute="top" constant="109" id="jvQ-wC-8l3"/>
                                             <constraint firstItem="BnI-if-M8T" firstAttribute="top" secondItem="avx-Of-uSp" secondAttribute="bottom" constant="16" id="uwW-9v-RE7"/>
                                         </constraints>
                                     </view>
@@ -113,7 +119,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="139" y="121"/>
+            <point key="canvasLocation" x="137.68115942028987" y="120.53571428571428"/>
         </scene>
     </scenes>
 </document>
