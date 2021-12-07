@@ -1,28 +1,32 @@
 PODS:
+  - iOSSnapshotTestCase (8.0.0):
+    - iOSSnapshotTestCase/SwiftSupport (= 8.0.0)
+  - iOSSnapshotTestCase/Core (8.0.0)
+  - iOSSnapshotTestCase/SwiftSupport (8.0.0):
+    - iOSSnapshotTestCase/Core
   - KeychainSwift (19.0.0)
-  - SnapshotTesting (1.9.0)
   - SwiftLint (0.45.1)
   - Swinject (2.8.1)
 
 DEPENDENCIES:
+  - iOSSnapshotTestCase
   - KeychainSwift
-  - SnapshotTesting
   - SwiftLint
   - Swinject
 
 SPEC REPOS:
   https://github.com/CocoaPods/Specs.git:
+    - iOSSnapshotTestCase
     - KeychainSwift
-    - SnapshotTesting
     - SwiftLint
     - Swinject
 
 SPEC CHECKSUMS:
+  iOSSnapshotTestCase: a670511f9ee3829c2b9c23e6e68f315fd7b6790f
   KeychainSwift: a06190cf933ad46b1e0abc3d77d29c06331715c7
-  SnapshotTesting: 6141c48b6aa76ead61431ca665c14ab9a066c53b
   SwiftLint: 06ac37e4d38c7068e0935bb30cda95f093bec761
   Swinject: 97112918bd7e0785dc2df7036213f3c8cbba6586
 
-PODFILE CHECKSUM: 0ee742eb1792cb8fae52eaa0031acbe6e7dce9ec
+PODFILE CHECKSUM: c4fd68381d0599e65e8f9a618ef4bca680988dad
 
 COCOAPODS: 1.9.3

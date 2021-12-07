@@ -15,7 +15,7 @@ target 'XcodeGenSample' do
   target 'XcodeGenSampleTests' do
     inherit! :search_paths
     # Pods for testing
-    pod 'SnapshotTesting'
+    pod 'iOSSnapshotTestCase'
   end
 
 end
