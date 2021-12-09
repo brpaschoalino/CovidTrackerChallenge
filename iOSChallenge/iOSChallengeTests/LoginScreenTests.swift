@@ -18,7 +18,7 @@ class LoginScreenTests: BaseSnapShotTest {
 
         sut = LoginViewController()
 
-        recordMode = false
+        recordMode = true
 
     }
 
