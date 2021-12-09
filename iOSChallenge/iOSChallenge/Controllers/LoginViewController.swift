@@ -16,7 +16,7 @@ class LoginViewController: UIViewController, Storyboarded {
 
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
     }
@@ -27,7 +27,6 @@ class LoginViewController: UIViewController, Storyboarded {
 
         
         if viewModel.checkValidSignIn(email: email, password: password) {
-            
             coordinator?.goToFeedMenu()
             
         } else {
