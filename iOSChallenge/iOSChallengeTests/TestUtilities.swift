@@ -7,8 +7,9 @@
 
 import XCTest
 import FBSnapshotTestCase
+import UIKit
 
-class TestUtilities: FBSnapshotTestCase {
+class BaseSnapShotTest: FBSnapshotTestCase {
 
     private var currentViewController: UIViewController!
     var rootViewController: UIViewController!
