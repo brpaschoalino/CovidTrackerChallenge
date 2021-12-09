@@ -11,17 +11,18 @@
 		2EC24B0F85E76386DBE5CEA4 /* MainMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E60D604BDE3A7C117A1DF3E /* MainMenuViewController.swift */; };
 		3EBD4DE2E4A69F89887D72B5 /* News.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0CC59633ECEF680874E732B /* News.swift */; };
 		6088DE894B65683D2852F29A /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44650FE5DAF7AE53DC16FE80 /* Coordinator.swift */; };
+		67A78857455D17D0626DF617 /* Pods_XcodeGenSampleTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 68C89FF1B1992B1C5E9225D9 /* Pods_XcodeGenSampleTests.framework */; };
 		796F1DA2AC5540C2061FE860 /* Pods_XcodeGenSample.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 160AEFC5CAD813146425DDC1 /* Pods_XcodeGenSample.framework */; };
 		81C32B5270A3E513D544F60B /* MainMenuStoryBoard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CD2B3393353C3A83F29C9CD0 /* MainMenuStoryBoard.storyboard */; };
-		8A0EC2B2604759CA64886E81 /* Pods_XcodeGenSampleTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 68C89FF1B1992B1C5E9225D9 /* Pods_XcodeGenSampleTests.framework */; };
 		A115FE8E9F24416B23171378 /* MainCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79EA78503245096B88A72473 /* MainCoordinator.swift */; };
 		A1448F02DFC90FFD904C0018 /* MainMenuViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FA0CE94623206C9BB0709BC /* MainMenuViewModel.swift */; };
 		A66E1676FF336E3F3B26AFA6 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CEADED93EFF0D0DF3EFB6E5 /* RegisterViewController.swift */; };
 		C9A1299A4E9A869730C65D99 /* LoginStoryBoard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0A4C6B58F6847CD3866C6B60 /* LoginStoryBoard.storyboard */; };
 		EBE7E43EEA8482412AA24D59 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55C4DCE1B66F17E085A475BD /* LoginViewController.swift */; };
 		F3A5C0ADCAE2605D5D49D5D6 /* RegisterStoryBoard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F38AA2618680E63F878E8FAD /* RegisterStoryBoard.storyboard */; };
-		F41E479D275FCDF900F2286F /* LoginScreenTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F41E479C275FCDF900F2286F /* LoginScreenTests.swift */; };
-		F41E479F275FDBBE00F2286F /* ScreenSizes.swift in Sources */ = {isa = PBXBuildFile; fileRef = F41E479E275FDBBE00F2286F /* ScreenSizes.swift */; };
+		F41E47C727623C5700F2286F /* LoginScreenTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F41E479C275FCDF900F2286F /* LoginScreenTests.swift */; };
+		F41E47C827623C5A00F2286F /* ScreenSizes.swift in Sources */ = {isa = PBXBuildFile; fileRef = F41E479E275FDBBE00F2286F /* ScreenSizes.swift */; };
+		F41E47C927623C5E00F2286F /* TestUtilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = F41E47A0276233B100F2286F /* TestUtilities.swift */; };
 		F46886E7275D65AC001A2A24 /* FeedMenuStoryBoard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F46886E6275D65AC001A2A24 /* FeedMenuStoryBoard.storyboard */; };
 		F46886E9275D65CD001A2A24 /* FeedMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F46886E8275D65CD001A2A24 /* FeedMenuViewController.swift */; };
 		F46886EB275D65E5001A2A24 /* FeedMenuViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F46886EA275D65E5001A2A24 /* FeedMenuViewModel.swift */; };
@@ -30,6 +31,16 @@
 		F4CA666C2757F204008EEAA6 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4CA666A2757F204008EEAA6 /* main.swift */; };
 		F4CA666D2757F204008EEAA6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4CA666B2757F204008EEAA6 /* AppDelegate.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		F41E47C227623C4600F2286F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0DA2213E977D40793E73C0F0 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 4B10A4F852AC5D61665DA1DA;
+			remoteInfo = XcodeGenSample;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		04DDB5CD48FEBBDA4B28D244 /* Pods-XcodeGenSample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-XcodeGenSample.release.xcconfig"; path = "Target Support Files/Pods-XcodeGenSample/Pods-XcodeGenSample.release.xcconfig"; sourceTree = "<group>"; };
@@ -46,7 +57,6 @@
 		814D1CB13D4BA1FF4A46F79B /* Storyboarded.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Storyboarded.swift; sourceTree = "<group>"; };
 		8BAD1A6106C59597CD7891F8 /* Pods-XcodeGenSampleTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-XcodeGenSampleTests.release.xcconfig"; path = "Target Support Files/Pods-XcodeGenSampleTests/Pods-XcodeGenSampleTests.release.xcconfig"; sourceTree = "<group>"; };
 		B8BD1AD3605BFAB47042C7EF /* Pods-XcodeGenSample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-XcodeGenSample.debug.xcconfig"; path = "Target Support Files/Pods-XcodeGenSample/Pods-XcodeGenSample.debug.xcconfig"; sourceTree = "<group>"; };
-		C8F3D0E2A9BB31936E823BA8 /* XcodeGenSampleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = XcodeGenSampleTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CD2B3393353C3A83F29C9CD0 /* MainMenuStoryBoard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MainMenuStoryBoard.storyboard; sourceTree = "<group>"; };
 		E5199F560D2FDC0202F582C4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		E9AAE5C3AE30D230C04CF498 /* XcodeGenSample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = XcodeGenSample.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -54,6 +64,8 @@
 		F38AA2618680E63F878E8FAD /* RegisterStoryBoard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = RegisterStoryBoard.storyboard; sourceTree = "<group>"; };
 		F41E479C275FCDF900F2286F /* LoginScreenTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginScreenTests.swift; sourceTree = "<group>"; };
 		F41E479E275FDBBE00F2286F /* ScreenSizes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenSizes.swift; sourceTree = "<group>"; };
+		F41E47A0276233B100F2286F /* TestUtilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestUtilities.swift; sourceTree = "<group>"; };
+		F41E47BE27623C4600F2286F /* XcodeGenSampleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = XcodeGenSampleTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F46886E6275D65AC001A2A24 /* FeedMenuStoryBoard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = FeedMenuStoryBoard.storyboard; sourceTree = "<group>"; };
 		F46886E8275D65CD001A2A24 /* FeedMenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedMenuViewController.swift; sourceTree = "<group>"; };
 		F46886EA275D65E5001A2A24 /* FeedMenuViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedMenuViewModel.swift; sourceTree = "<group>"; };
@@ -65,19 +77,19 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		091BF86BCD06B72D5C072184 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				8A0EC2B2604759CA64886E81 /* Pods_XcodeGenSampleTests.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		DEFF979EC6EDD62A6C2D8966 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				796F1DA2AC5540C2061FE860 /* Pods_XcodeGenSample.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F41E47BB27623C4600F2286F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				67A78857455D17D0626DF617 /* Pods_XcodeGenSampleTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -99,7 +111,7 @@
 			isa = PBXGroup;
 			children = (
 				E9AAE5C3AE30D230C04CF498 /* XcodeGenSample.app */,
-				C8F3D0E2A9BB31936E823BA8 /* XcodeGenSampleTests.xctest */,
+				F41E47BE27623C4600F2286F /* XcodeGenSampleTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -142,6 +154,7 @@
 			children = (
 				F41E479C275FCDF900F2286F /* LoginScreenTests.swift */,
 				F41E479E275FDBBE00F2286F /* ScreenSizes.swift */,
+				F41E47A0276233B100F2286F /* TestUtilities.swift */,
 			);
 			path = iOSChallengeTests;
 			sourceTree = "<group>";
@@ -230,22 +243,24 @@
 			productReference = E9AAE5C3AE30D230C04CF498 /* XcodeGenSample.app */;
 			productType = "com.apple.product-type.application";
 		};
-		4CEFC676E234F8A586BC54C2 /* XcodeGenSampleTests */ = {
+		F41E47BD27623C4600F2286F /* XcodeGenSampleTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 653F5D9D869259EB22D8FDD2 /* Build configuration list for PBXNativeTarget "XcodeGenSampleTests" */;
+			buildConfigurationList = F41E47C427623C4600F2286F /* Build configuration list for PBXNativeTarget "XcodeGenSampleTests" */;
 			buildPhases = (
-				FA8712E34D303E2077B9FF68 /* [CP] Check Pods Manifest.lock */,
-				72B0C4E45E1358AAB193F5D5 /* Sources */,
-				091BF86BCD06B72D5C072184 /* Frameworks */,
-				451DA00E917180E6E66525C5 /* [CP] Embed Pods Frameworks */,
+				B28F31F9F5C859599AE979E0 /* [CP] Check Pods Manifest.lock */,
+				F41E47BA27623C4600F2286F /* Sources */,
+				F41E47BB27623C4600F2286F /* Frameworks */,
+				F41E47BC27623C4600F2286F /* Resources */,
+				6BC2457144A2DC1B2500A24C /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				F41E47C327623C4600F2286F /* PBXTargetDependency */,
 			);
 			name = XcodeGenSampleTests;
 			productName = XcodeGenSampleTests;
-			productReference = C8F3D0E2A9BB31936E823BA8 /* XcodeGenSampleTests.xctest */;
+			productReference = F41E47BE27623C4600F2286F /* XcodeGenSampleTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -254,10 +269,12 @@
 		0DA2213E977D40793E73C0F0 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastSwiftUpdateCheck = 1300;
 				LastUpgradeCheck = 1200;
 				TargetAttributes = {
-					4CEFC676E234F8A586BC54C2 = {
-						LastSwiftMigration = 1300;
+					F41E47BD27623C4600F2286F = {
+						CreatedOnToolsVersion = 13.0;
+						TestTargetID = 4B10A4F852AC5D61665DA1DA;
 					};
 				};
 			};
@@ -275,7 +292,7 @@
 			projectRoot = "";
 			targets = (
 				4B10A4F852AC5D61665DA1DA /* XcodeGenSample */,
-				4CEFC676E234F8A586BC54C2 /* XcodeGenSampleTests */,
+				F41E47BD27623C4600F2286F /* XcodeGenSampleTests */,
 			);
 		};
 /* End PBXProject section */
@@ -289,6 +306,13 @@
 				81C32B5270A3E513D544F60B /* MainMenuStoryBoard.storyboard in Resources */,
 				F3A5C0ADCAE2605D5D49D5D6 /* RegisterStoryBoard.storyboard in Resources */,
 				F46886E7275D65AC001A2A24 /* FeedMenuStoryBoard.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F41E47BC27623C4600F2286F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -310,23 +334,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-XcodeGenSample/Pods-XcodeGenSample-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		451DA00E917180E6E66525C5 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-XcodeGenSampleTests/Pods-XcodeGenSampleTests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-XcodeGenSampleTests/Pods-XcodeGenSampleTests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-XcodeGenSampleTests/Pods-XcodeGenSampleTests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		4DB3B6464E484C2DFD2BFA73 /* [CP] Check Pods Manifest.lock */ = {
@@ -351,7 +358,24 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		FA8712E34D303E2077B9FF68 /* [CP] Check Pods Manifest.lock */ = {
+		6BC2457144A2DC1B2500A24C /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-XcodeGenSampleTests/Pods-XcodeGenSampleTests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-XcodeGenSampleTests/Pods-XcodeGenSampleTests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-XcodeGenSampleTests/Pods-XcodeGenSampleTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B28F31F9F5C859599AE979E0 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -397,38 +421,27 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		72B0C4E45E1358AAB193F5D5 /* Sources */ = {
+		F41E47BA27623C4600F2286F /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F41E479F275FDBBE00F2286F /* ScreenSizes.swift in Sources */,
-				F41E479D275FCDF900F2286F /* LoginScreenTests.swift in Sources */,
+				F41E47C827623C5A00F2286F /* ScreenSizes.swift in Sources */,
+				F41E47C927623C5E00F2286F /* TestUtilities.swift in Sources */,
+				F41E47C727623C5700F2286F /* LoginScreenTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
-/* Begin XCBuildConfiguration section */
-		0D79D9F414F68973F18B7EB3 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 266BAC24566D7976F125AA73 /* Pods-XcodeGenSampleTests.debug.xcconfig */;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CLANG_ENABLE_MODULES = YES;
-				ENABLE_TESTING_SEARCH_PATHS = YES;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.brp.XcodeGenSampleTests;
-				SDKROOT = iphoneos;
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Debug;
+/* Begin PBXTargetDependency section */
+		F41E47C327623C4600F2286F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 4B10A4F852AC5D61665DA1DA /* XcodeGenSample */;
+			targetProxy = F41E47C227623C4600F2286F /* PBXContainerItemProxy */;
 		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
 		54050CAE9AAD6CC4F0A181FD /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -521,25 +534,6 @@
 			};
 			name = Debug;
 		};
-		9718EECD0D048D7F95CDC9F9 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 8BAD1A6106C59597CD7891F8 /* Pods-XcodeGenSampleTests.release.xcconfig */;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CLANG_ENABLE_MODULES = YES;
-				ENABLE_TESTING_SEARCH_PATHS = YES;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.brp.XcodeGenSampleTests;
-				SDKROOT = iphoneos;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Release;
-		};
 		D65821DEC6AEBC7D110FE661 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -603,6 +597,63 @@
 			};
 			name = Debug;
 		};
+		F41E47C527623C4600F2286F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 266BAC24566D7976F125AA73 /* Pods-XcodeGenSampleTests.debug.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = B9LYH42J24;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.brp.XcodeGenSampleTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/XcodeGenSample.app/XcodeGenSample";
+			};
+			name = Debug;
+		};
+		F41E47C627623C4600F2286F /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8BAD1A6106C59597CD7891F8 /* Pods-XcodeGenSampleTests.release.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = B9LYH42J24;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.brp.XcodeGenSampleTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/XcodeGenSample.app/XcodeGenSample";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -624,11 +675,11 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Debug;
 		};
-		653F5D9D869259EB22D8FDD2 /* Build configuration list for PBXNativeTarget "XcodeGenSampleTests" */ = {
+		F41E47C427623C4600F2286F /* Build configuration list for PBXNativeTarget "XcodeGenSampleTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				0D79D9F414F68973F18B7EB3 /* Debug */,
-				9718EECD0D048D7F95CDC9F9 /* Release */,
+				F41E47C527623C4600F2286F /* Debug */,
+				F41E47C627623C4600F2286F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Debug;
