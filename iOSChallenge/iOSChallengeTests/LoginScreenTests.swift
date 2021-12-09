@@ -11,23 +11,18 @@ import FBSnapshotTestCase
 
 class LoginScreenTests: BaseSnapShotTest {
 
-    var sut: LoginViewController!
-
     override func setUp() {
         super.setUp()
 
-        sut = LoginViewController()
-
         recordMode = false
-
     }
 
     override func tearDown() {
-        sut = nil
+        super.tearDown()
     }
 
     func testDefaultScreen() {
-        setupAndTakeSnapshots(viewController: sut)
+        let viewController: UIViewController = UIStoryboard(name: "LoginStoryBoard", bundle: nil).instantiateViewController(withIdentifier: "LoginViewController")
+                setupAndTakeSnapshots(viewController: viewController)
     }
-
 }

@@ -29,7 +29,6 @@ class BaseSnapShotTest: FBSnapshotTestCase {
     }
 
     override func tearDown() {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
         currentViewController = nil
         rootViewController = nil
         baseNavigationController = nil
@@ -47,12 +46,16 @@ class BaseSnapShotTest: FBSnapshotTestCase {
         })
         wait(for: [expect], timeout: 10.0)
       }
+
     func takeSnapshotsForAllScreens(needsWait: Bool = true,
                       executeBetweenInteractions: (() -> Void)? = nil,
                       pixelTolerance: CGFloat = 0.01,
                       overallTolerance: CGFloat = 0.01,
                       file: StaticString = #file,
                       line: UInt = #line) {
+        if needsWait {
+            waitBeforeContinue(time: 2.0)
+        }
         ScreenSize.allCases.forEach { screenSize in
           window.bounds = screenSize.value
           currentViewController.view.layoutIfNeeded()
@@ -79,5 +82,12 @@ class BaseSnapShotTest: FBSnapshotTestCase {
                       file: file,
                       line: line)
       }
+}
 
+extension FBSnapshotTestCase {
+
+    func waitBeforeContinue(time: TimeInterval = 5) {
+        let expect = expectation(description: "wait before continue")
+        _ = XCTWaiter.wait(for: [expect], timeout: time)
+    }
 }
