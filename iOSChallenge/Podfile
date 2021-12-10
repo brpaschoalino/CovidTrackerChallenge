@@ -9,6 +9,7 @@ target 'XcodeGenSample' do
   pod 'SwiftLint'
   pod 'Swinject'
   pod 'KeychainSwift'
+  pod 'Alamofire'
 
   # Pods for XcodeGenSample
 
