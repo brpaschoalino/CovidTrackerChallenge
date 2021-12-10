@@ -27,6 +27,7 @@
 		F41E47CF2762C1EA00F2286F /* GetApiData.swift in Sources */ = {isa = PBXBuildFile; fileRef = F41E47CE2762C1EA00F2286F /* GetApiData.swift */; };
 		F41E47D22762D87D00F2286F /* StatesTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F41E47D12762D87D00F2286F /* StatesTableViewCell.xib */; };
 		F41E47D42762D8A400F2286F /* StatesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F41E47D32762D8A400F2286F /* StatesTableViewCell.swift */; };
+		F464CDFB2763995700F4EC83 /* Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = F464CDFA2763995700F4EC83 /* Data.swift */; };
 		F46886E7275D65AC001A2A24 /* FeedMenuStoryBoard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F46886E6275D65AC001A2A24 /* FeedMenuStoryBoard.storyboard */; };
 		F46886E9275D65CD001A2A24 /* FeedMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F46886E8275D65CD001A2A24 /* FeedMenuViewController.swift */; };
 		F46886EB275D65E5001A2A24 /* FeedMenuViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F46886EA275D65E5001A2A24 /* FeedMenuViewModel.swift */; };
@@ -74,6 +75,7 @@
 		F41E47CE2762C1EA00F2286F /* GetApiData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetApiData.swift; sourceTree = "<group>"; };
 		F41E47D12762D87D00F2286F /* StatesTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = StatesTableViewCell.xib; sourceTree = "<group>"; };
 		F41E47D32762D8A400F2286F /* StatesTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatesTableViewCell.swift; sourceTree = "<group>"; };
+		F464CDFA2763995700F4EC83 /* Data.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Data.swift; sourceTree = "<group>"; };
 		F46886E6275D65AC001A2A24 /* FeedMenuStoryBoard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = FeedMenuStoryBoard.storyboard; sourceTree = "<group>"; };
 		F46886E8275D65CD001A2A24 /* FeedMenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedMenuViewController.swift; sourceTree = "<group>"; };
 		F46886EA275D65E5001A2A24 /* FeedMenuViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedMenuViewModel.swift; sourceTree = "<group>"; };
@@ -146,6 +148,7 @@
 			children = (
 				F0CC59633ECEF680874E732B /* News.swift */,
 				F41E47CC2762C0C400F2286F /* StatesData.swift */,
+				F464CDFA2763995700F4EC83 /* Data.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -432,6 +435,7 @@
 				A115FE8E9F24416B23171378 /* MainCoordinator.swift in Sources */,
 				2EC24B0F85E76386DBE5CEA4 /* MainMenuViewController.swift in Sources */,
 				A1448F02DFC90FFD904C0018 /* MainMenuViewModel.swift in Sources */,
+				F464CDFB2763995700F4EC83 /* Data.swift in Sources */,
 				3EBD4DE2E4A69F89887D72B5 /* News.swift in Sources */,
 				A66E1676FF336E3F3B26AFA6 /* RegisterViewController.swift in Sources */,
 				F46886EE275D77CC001A2A24 /* LoginViewModel.swift in Sources */,

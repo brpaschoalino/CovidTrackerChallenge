@@ -13,7 +13,7 @@ class FeedMenuViewController:UIViewController, Storyboarded, UITableViewDelegate
     weak var coordinator: MainCoordinator?
 
     private let viewModel = FeedMenuViewModel.shared
-//    private let statesData = GetApiData()
+    private let statesData = GetApiData()
 
     @IBOutlet var tableView: UITableView!
 
@@ -25,17 +25,25 @@ class FeedMenuViewController:UIViewController, Storyboarded, UITableViewDelegate
         tableView.delegate = self
         tableView.dataSource = self
 
-//        doStatesDataRequest()
+        doStatesDataRequest()
     }
 
-//    func doStatesDataRequest(){
-//        guard let statesDataUrl = URL(string: "https://covid19-brazil-api.vercel.app/api/report/v1/brazil/20200318") else { return }
-//
-//        statesData.apiStatesData(url: statesDataUrl, success: { (data) in
-//            FeedMenuViewModel.shared.fillStatesData(statesData: data)
-//
-//        })
-//    }
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(true)
+
+        self.tableView.reloadData()
+    }
+
+    func doStatesDataRequest(){
+        guard let statesDataUrl = URL(string: "https://covid19-brazil-api.vercel.app/api/report/v1/brazil/20200318") else { return }
+
+        statesData.apiStatesData(url: statesDataUrl, success: { (data) in
+            print("Filling the data list")
+            FeedMenuViewModel.shared.fillStatesData(statesData: data)
+
+            self.tableView.reloadData()
+        })
+    }
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 1

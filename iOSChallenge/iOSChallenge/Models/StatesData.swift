@@ -7,14 +7,6 @@
 
 import Foundation
 
-struct Data: Codable {
-    var data: [StatesData]
-
-    enum CodingKeys: String, CodingKey {
-        case data
-    }
-}
-
 struct StatesData: Codable {
     var uid: Int
     var uf: String
