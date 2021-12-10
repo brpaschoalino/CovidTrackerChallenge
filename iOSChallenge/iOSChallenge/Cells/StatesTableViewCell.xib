@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19162" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19144"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="StatesTableViewCell" rowHeight="310" id="nb3-9z-gXw" customClass="StatesTableViewCell" customModule="XcodeGenSample" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="524" height="310"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="nb3-9z-gXw" id="vAj-Gi-T3e">
+                <rect key="frame" x="0.0" y="0.0" width="524" height="310"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Estado: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mch-uG-vbZ">
+                        <rect key="frame" x="30" y="35" width="86" height="30"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Total de Casos: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pey-hf-8wV">
+                        <rect key="frame" x="30" y="95" width="169" height="30"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Cases" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hpw-mu-p3Q">
+                        <rect key="frame" x="204" y="95" width="68" height="30"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="UF" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FyK-2Q-GM1">
+                        <rect key="frame" x="121" y="35" width="32" height="30"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="State" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tzL-5f-aj0">
+                        <rect key="frame" x="163" y="35" width="57" height="30"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Total de Suspeitos: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HIC-FW-ZKl">
+                        <rect key="frame" x="30" y="155" width="208" height="30"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Total de Mortes: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PfF-Ql-Syx">
+                        <rect key="frame" x="30" y="215" width="177" height="30"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Suspects" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="E0c-lm-Ykq">
+                        <rect key="frame" x="243" y="155" width="101" height="30"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Deaths" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bf9-Zz-UTO">
+                        <rect key="frame" x="212" y="215" width="77" height="30"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Cases" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ypY-2s-mQx">
+                        <rect key="frame" x="204" y="95" width="68" height="30"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="PfF-Ql-Syx" firstAttribute="leading" secondItem="pey-hf-8wV" secondAttribute="leading" id="1k4-AS-Ihc"/>
+                    <constraint firstItem="PfF-Ql-Syx" firstAttribute="top" secondItem="HIC-FW-ZKl" secondAttribute="bottom" constant="30" id="5sq-Rp-Kcr"/>
+                    <constraint firstItem="FyK-2Q-GM1" firstAttribute="centerY" secondItem="mch-uG-vbZ" secondAttribute="centerY" id="61M-TU-job"/>
+                    <constraint firstItem="HIC-FW-ZKl" firstAttribute="top" secondItem="pey-hf-8wV" secondAttribute="bottom" constant="30" id="7Jb-33-36Z"/>
+                    <constraint firstItem="Hpw-mu-p3Q" firstAttribute="leading" secondItem="pey-hf-8wV" secondAttribute="trailing" constant="5" id="B9H-WZ-nDd"/>
+                    <constraint firstItem="tzL-5f-aj0" firstAttribute="centerY" secondItem="mch-uG-vbZ" secondAttribute="centerY" id="BGO-26-gHo"/>
+                    <constraint firstItem="Bf9-Zz-UTO" firstAttribute="leading" secondItem="PfF-Ql-Syx" secondAttribute="trailing" constant="5" id="GEB-us-Tzt"/>
+                    <constraint firstItem="pey-hf-8wV" firstAttribute="leading" secondItem="mch-uG-vbZ" secondAttribute="leading" id="Gc1-SR-Ejx"/>
+                    <constraint firstItem="FyK-2Q-GM1" firstAttribute="leading" secondItem="mch-uG-vbZ" secondAttribute="trailing" constant="5" id="MiA-Gz-c73"/>
+                    <constraint firstItem="E0c-lm-Ykq" firstAttribute="centerY" secondItem="HIC-FW-ZKl" secondAttribute="centerY" id="V8K-ke-cmI"/>
+                    <constraint firstItem="E0c-lm-Ykq" firstAttribute="leading" secondItem="HIC-FW-ZKl" secondAttribute="trailing" constant="5" id="fqz-Kh-KKd"/>
+                    <constraint firstItem="pey-hf-8wV" firstAttribute="top" secondItem="mch-uG-vbZ" secondAttribute="bottom" constant="30" id="lju-6I-Aih"/>
+                    <constraint firstItem="tzL-5f-aj0" firstAttribute="leading" secondItem="FyK-2Q-GM1" secondAttribute="trailing" constant="10" id="nHA-JF-dso"/>
+                    <constraint firstItem="HIC-FW-ZKl" firstAttribute="leading" secondItem="pey-hf-8wV" secondAttribute="leading" id="tj2-mj-Opb"/>
+                    <constraint firstItem="Bf9-Zz-UTO" firstAttribute="centerY" secondItem="PfF-Ql-Syx" secondAttribute="centerY" id="uyi-Dx-HnA"/>
+                    <constraint firstItem="Hpw-mu-p3Q" firstAttribute="centerY" secondItem="pey-hf-8wV" secondAttribute="centerY" id="vbB-0r-8hr"/>
+                    <constraint firstItem="mch-uG-vbZ" firstAttribute="top" secondItem="vAj-Gi-T3e" secondAttribute="top" constant="35" id="vuP-mg-hhC"/>
+                    <constraint firstItem="mch-uG-vbZ" firstAttribute="leading" secondItem="vAj-Gi-T3e" secondAttribute="leading" constant="30" id="zrW-lm-EP3"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="stateCases" destination="ypY-2s-mQx" id="k4h-Ga-Fb2"/>
+                <outlet property="stateDeaths" destination="Bf9-Zz-UTO" id="CBY-49-Fem"/>
+                <outlet property="stateState" destination="tzL-5f-aj0" id="oCm-mL-yeh"/>
+                <outlet property="stateSuspects" destination="E0c-lm-Ykq" id="9OD-VJ-ZFu"/>
+                <outlet property="stateUf" destination="FyK-2Q-GM1" id="D7K-2X-Oo9"/>
+            </connections>
+            <point key="canvasLocation" x="268.1159420289855" y="221.65178571428569"/>
+        </tableViewCell>
+    </objects>
+</document>

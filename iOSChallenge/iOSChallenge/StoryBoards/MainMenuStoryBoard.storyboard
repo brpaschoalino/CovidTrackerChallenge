@@ -18,20 +18,24 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="MN5-fg-WI3">
-                                <rect key="frame" x="168.5" y="417" width="77.5" height="62"/>
+                                <rect key="frame" x="142" y="404" width="130" height="88"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TiD-Ow-wBr">
-                                        <rect key="frame" x="0.0" y="0.0" width="77.5" height="31"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="130" height="44"/>
                                         <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="plain" title="Login"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Login">
+                                            <fontDescription key="titleFontDescription" type="system" pointSize="25"/>
+                                        </buttonConfiguration>
                                         <connections>
                                             <action selector="loginButtonTapped:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="tym-YC-M44"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="g6Y-kC-MMh">
-                                        <rect key="frame" x="0.0" y="31" width="77.5" height="31"/>
+                                        <rect key="frame" x="0.0" y="44" width="130" height="44"/>
                                         <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="plain" title="Register"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Cadastrar">
+                                            <fontDescription key="titleFontDescription" type="system" pointSize="25"/>
+                                        </buttonConfiguration>
                                         <connections>
                                             <action selector="registerButtonTapped:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="kyP-sm-lQe"/>
                                         </connections>
