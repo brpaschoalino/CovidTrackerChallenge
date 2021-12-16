@@ -17,7 +17,7 @@ class MainCoordinator: Coordinator {
     }
 
     func start() {
-        let vc = MainMenuViewController.instantiate()
+        let vc = LoginViewController.instantiateLoginStoryBoard()
         vc.coordinator = self
         navigationController.pushViewController(vc, animated: false)
     }

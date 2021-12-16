@@ -15,9 +15,15 @@ class RegisterViewController: UIViewController, Storyboarded {
 
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
+    @IBOutlet weak var nameTextField: UITextField!
 
     override func viewDidLoad() {
         super.viewDidLoad()
+
+        self.title = "Cadastro de Conta"
+        self.navigationController?.navigationBar.tintColor = UIColor.white
+        let titleTextColour = [NSAttributedString.Key.foregroundColor:UIColor.white]
+        navigationController?.navigationBar.titleTextAttributes = titleTextColour
     }
 
     @IBAction func didTapSignUp(_ sender: Any) {
