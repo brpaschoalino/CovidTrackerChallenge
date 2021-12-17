@@ -19,6 +19,15 @@ class LoginViewController: UIViewController, Storyboarded {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+
+        self.title = "Login Menu"
+        let titleTextColour = [NSAttributedString.Key.foregroundColor:UIColor.white]
+        navigationController?.navigationBar.titleTextAttributes = titleTextColour
+    }
+
+    @IBAction func didTapRegister(_ sender: Any) {
+
+        coordinator?.goToRegister()
     }
 
     @IBAction func didTapLogin(_ sender: Any) {
@@ -30,7 +39,7 @@ class LoginViewController: UIViewController, Storyboarded {
             coordinator?.goToFeedMenu()
             
         } else {
-            let alert = UIAlertController(title: "Failed Sign In", message: "Failed Sign In due to wrong email or password", preferredStyle: UIAlertController.Style.alert)
+            let alert = UIAlertController(title: "Falha no Login", message: "Login ou Senha Incorretos. Tente Novamente", preferredStyle: UIAlertController.Style.alert)
             alert.addAction(UIAlertAction(title: "OK", style: .cancel, handler: nil ))
             self.present(alert, animated: true, completion: nil)
         }
