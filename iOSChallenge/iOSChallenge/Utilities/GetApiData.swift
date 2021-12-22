@@ -10,7 +10,7 @@ import Alamofire
 
 class GetApiData {
 
-    func apiStatesData (url: URL, success: @escaping ([StatesData]) -> Void) {
+    func apiStatesData (url: URLRequest, success: @escaping ([StatesData]) -> Void) {
         AF.request(url).validate().responseJSON { response in
             guard let statesData = try?JSONDecoder().decode(getStateData.self, from: response.data!) else { return }
 

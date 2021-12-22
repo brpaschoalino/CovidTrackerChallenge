@@ -12,8 +12,7 @@ class FeedMenuViewController:UIViewController, Storyboarded, UITableViewDelegate
 
     weak var coordinator: MainCoordinator?
 
-    private let viewModel = FeedMenuViewModel.shared
-    private let statesData = GetApiData()
+    var viewModel: FeedMenuViewModel?
 
     @IBOutlet var tableView: UITableView!
 
@@ -25,7 +24,9 @@ class FeedMenuViewController:UIViewController, Storyboarded, UITableViewDelegate
         tableView.delegate = self
         tableView.dataSource = self
 
-        doStatesDataRequest()
+        viewModel?.doStatesDataRequest {
+            self.tableView.reloadData()
+        }
     }
 
     override func viewWillAppear(_ animated: Bool) {
@@ -34,19 +35,8 @@ class FeedMenuViewController:UIViewController, Storyboarded, UITableViewDelegate
         self.tableView.reloadData()
     }
 
-    func doStatesDataRequest(){
-        guard let statesDataUrl = URL(string: "https://covid19-brazil-api.vercel.app/api/report/v1/brazil/20200318") else { return }
-
-        statesData.apiStatesData(url: statesDataUrl, success: { (data) in
-            print("Filling the data list")
-            FeedMenuViewModel.shared.fillStatesData(statesData: data)
-
-            self.tableView.reloadData()
-        })
-    }
-
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 1
+        return viewModel?.getCountryDataSize() ?? 0
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -54,10 +44,11 @@ class FeedMenuViewController:UIViewController, Storyboarded, UITableViewDelegate
 
         let textCell = tableView.dequeueReusableCell(withIdentifier: StatesTableViewCell.identifier,
                                                      for: indexPath) as! StatesTableViewCell
-        textCell.configure(with: viewModel.getStateUF(index: indexPath.row), state: viewModel.getState(index: indexPath.row),
-                           cases: viewModel.getStateCases(index: indexPath.row),
-                           suspects: viewModel.getStateSuspects(index: indexPath.row),
-                           deaths: viewModel.getStateDeats(index: indexPath.row))
+        textCell.configure(with: viewModel?.getStateUF(index: indexPath.row) ?? "",
+                           state: viewModel?.getState(index: indexPath.row) ?? "",
+                           cases: viewModel?.getStateCases(index: indexPath.row) ?? 0,
+                           suspects: viewModel?.getStateSuspects(index: indexPath.row) ?? 0,
+                           deaths: viewModel?.getStateDeats(index: indexPath.row) ?? 0)
         textCell.selectionStyle = UITableViewCell.SelectionStyle.none
 
         print("success in creating the text cell")

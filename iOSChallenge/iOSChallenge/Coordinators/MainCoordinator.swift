@@ -36,9 +36,11 @@ class MainCoordinator: Coordinator {
     }
 
     func goToFeedMenu() {
-        let vc = FeedMenuViewController.instantiateFeedMenuStoryBoard()
+        guard let vc = FeedMenuViewController.instantiateFeedMenuStoryBoard() else { return }
         vc.coordinator = self
         navigationController.pushViewController(vc, animated: true)
+
+
 
     }
 }
