@@ -35,6 +35,7 @@
 		F46886F0275D7AA8001A2A24 /* RegisterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F46886EF275D7AA8001A2A24 /* RegisterViewModel.swift */; };
 		F4CA666C2757F204008EEAA6 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4CA666A2757F204008EEAA6 /* main.swift */; };
 		F4CA666D2757F204008EEAA6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4CA666B2757F204008EEAA6 /* AppDelegate.swift */; };
+		F4D95AAB276F7AC1001ED03E /* StatesDataRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4D95AAA276F7AC0001ED03E /* StatesDataRequest.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -84,6 +85,7 @@
 		F4CA666A2757F204008EEAA6 /* main.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		F4CA666B2757F204008EEAA6 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F4CA6676275A5446008EEAA6 /* XcodeGenSample.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = XcodeGenSample.entitlements; sourceTree = "<group>"; };
+		F4D95AAA276F7AC0001ED03E /* StatesDataRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatesDataRequest.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -240,6 +242,7 @@
 			children = (
 				814D1CB13D4BA1FF4A46F79B /* Storyboarded.swift */,
 				F41E47CE2762C1EA00F2286F /* GetApiData.swift */,
+				F4D95AAA276F7AC0001ED03E /* StatesDataRequest.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -445,6 +448,7 @@
 				2810EAC9091B4B5A033621E5 /* Storyboarded.swift in Sources */,
 				F46886EB275D65E5001A2A24 /* FeedMenuViewModel.swift in Sources */,
 				F41E47D42762D8A400F2286F /* StatesTableViewCell.swift in Sources */,
+				F4D95AAB276F7AC1001ED03E /* StatesDataRequest.swift in Sources */,
 				F41E47CF2762C1EA00F2286F /* GetApiData.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

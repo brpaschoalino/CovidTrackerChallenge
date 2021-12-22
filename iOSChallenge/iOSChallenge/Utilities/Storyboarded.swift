@@ -37,9 +37,14 @@ extension Storyboarded where Self: UIViewController {
         return storyboard.instantiateViewController(withIdentifier: id) as! Self
     }
     
-    static func instantiateFeedMenuStoryBoard() -> Self {
+    static func instantiateFeedMenuStoryBoard() -> FeedMenuViewController? {
         let id = String(describing: self)
         let storyboard = UIStoryboard(name: "FeedMenuStoryBoard", bundle: Bundle.main)
-        return storyboard.instantiateViewController(withIdentifier: id) as! Self
+        let viewController = storyboard.instantiateViewController(withIdentifier: id) as? FeedMenuViewController
+        let statesData = GetApiData()
+        let viewModel = FeedMenuViewModel(service: statesData)
+        viewController?.viewModel = viewModel
+
+        return viewController
     }
 }
