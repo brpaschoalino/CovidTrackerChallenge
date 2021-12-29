@@ -10,6 +10,7 @@ target 'XcodeGenSample' do
   pod 'Alamofire'
   pod 'Mocker'
   pod "PromiseKit", "~> 6.8"
+  pod 'SQLite.swift', '~> 0.13.1'
 
   # Pods for XcodeGenSample
 

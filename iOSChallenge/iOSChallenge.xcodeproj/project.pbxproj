@@ -29,6 +29,11 @@
 		F41E47D42762D8A400F2286F /* StatesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F41E47D32762D8A400F2286F /* StatesTableViewCell.swift */; };
 		F4322470277B948C00C43478 /* GetStatesRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = F432246F277B948C00C43478 /* GetStatesRequest.swift */; };
 		F4322473277B9C7300C43478 /* ObservableObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4322472277B9C7300C43478 /* ObservableObject.swift */; };
+		F4322476277CA1C600C43478 /* Database.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4322475277CA1C600C43478 /* Database.swift */; };
+		F4322479277CA8AF00C43478 /* SQLDatabaseRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4322478277CA8AF00C43478 /* SQLDatabaseRepository.swift */; };
+		F432247B277CA97200C43478 /* CountryRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = F432247A277CA97200C43478 /* CountryRepository.swift */; };
+		F432247D277CB4A600C43478 /* Country.swift in Sources */ = {isa = PBXBuildFile; fileRef = F432247C277CB4A600C43478 /* Country.swift */; };
+		F432247F277CB9DE00C43478 /* FetchCountriesUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = F432247E277CB9DE00C43478 /* FetchCountriesUseCase.swift */; };
 		F464CDFB2763995700F4EC83 /* GetStatesDataResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = F464CDFA2763995700F4EC83 /* GetStatesDataResponse.swift */; };
 		F46886E7275D65AC001A2A24 /* FeedMenuStoryBoard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F46886E6275D65AC001A2A24 /* FeedMenuStoryBoard.storyboard */; };
 		F46886E9275D65CD001A2A24 /* FeedMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F46886E8275D65CD001A2A24 /* FeedMenuViewController.swift */; };
@@ -84,6 +89,11 @@
 		F41E47D32762D8A400F2286F /* StatesTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatesTableViewCell.swift; sourceTree = "<group>"; };
 		F432246F277B948C00C43478 /* GetStatesRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetStatesRequest.swift; sourceTree = "<group>"; };
 		F4322472277B9C7300C43478 /* ObservableObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObservableObject.swift; sourceTree = "<group>"; };
+		F4322475277CA1C600C43478 /* Database.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Database.swift; sourceTree = "<group>"; };
+		F4322478277CA8AF00C43478 /* SQLDatabaseRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SQLDatabaseRepository.swift; sourceTree = "<group>"; };
+		F432247A277CA97200C43478 /* CountryRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryRepository.swift; sourceTree = "<group>"; };
+		F432247C277CB4A600C43478 /* Country.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Country.swift; sourceTree = "<group>"; };
+		F432247E277CB9DE00C43478 /* FetchCountriesUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchCountriesUseCase.swift; sourceTree = "<group>"; };
 		F464CDFA2763995700F4EC83 /* GetStatesDataResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetStatesDataResponse.swift; sourceTree = "<group>"; };
 		F46886E6275D65AC001A2A24 /* FeedMenuStoryBoard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = FeedMenuStoryBoard.storyboard; sourceTree = "<group>"; };
 		F46886E8275D65CD001A2A24 /* FeedMenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedMenuViewController.swift; sourceTree = "<group>"; };
@@ -155,6 +165,7 @@
 			children = (
 				F0CC59633ECEF680874E732B /* News.swift */,
 				F41E47CC2762C0C400F2286F /* StatesData.swift */,
+				F432247C277CB4A600C43478 /* Country.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -292,6 +303,7 @@
 		F432245A277B574600C43478 /* Infrastructure */ = {
 			isa = PBXGroup;
 			children = (
+				F4322474277CA1AA00C43478 /* Database */,
 				F432245F277B5A1000C43478 /* Network */,
 			);
 			path = Infrastructure;
@@ -346,6 +358,7 @@
 			isa = PBXGroup;
 			children = (
 				F4D95AAA276F7AC0001ED03E /* FetchStatesDataUseCase.swift */,
+				F432247E277CB9DE00C43478 /* FetchCountriesUseCase.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -471,6 +484,24 @@
 				F464CDFA2763995700F4EC83 /* GetStatesDataResponse.swift */,
 			);
 			path = Responses;
+			sourceTree = "<group>";
+		};
+		F4322474277CA1AA00C43478 /* Database */ = {
+			isa = PBXGroup;
+			children = (
+				F4322477277CA82200C43478 /* Repository */,
+				F4322475277CA1C600C43478 /* Database.swift */,
+			);
+			path = Database;
+			sourceTree = "<group>";
+		};
+		F4322477277CA82200C43478 /* Repository */ = {
+			isa = PBXGroup;
+			children = (
+				F4322478277CA8AF00C43478 /* SQLDatabaseRepository.swift */,
+				F432247A277CA97200C43478 /* CountryRepository.swift */,
+			);
+			path = Repository;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -658,6 +689,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				6088DE894B65683D2852F29A /* CoordinatorProtocol.swift in Sources */,
+				F432247F277CB9DE00C43478 /* FetchCountriesUseCase.swift in Sources */,
 				F41E47CD2762C0C400F2286F /* StatesData.swift in Sources */,
 				F4322470277B948C00C43478 /* GetStatesRequest.swift in Sources */,
 				EBE7E43EEA8482412AA24D59 /* LoginViewController.swift in Sources */,
@@ -669,14 +701,18 @@
 				3EBD4DE2E4A69F89887D72B5 /* News.swift in Sources */,
 				A66E1676FF336E3F3B26AFA6 /* RegisterViewController.swift in Sources */,
 				F4322473277B9C7300C43478 /* ObservableObject.swift in Sources */,
+				F4322476277CA1C600C43478 /* Database.swift in Sources */,
+				F432247D277CB4A600C43478 /* Country.swift in Sources */,
 				F46886EE275D77CC001A2A24 /* LoginViewModel.swift in Sources */,
 				F46886F0275D7AA8001A2A24 /* RegisterViewModel.swift in Sources */,
+				F4322479277CA8AF00C43478 /* SQLDatabaseRepository.swift in Sources */,
 				F46886E9275D65CD001A2A24 /* FeedMenuViewController.swift in Sources */,
 				F4CA666D2757F204008EEAA6 /* AppDelegate.swift in Sources */,
 				2810EAC9091B4B5A033621E5 /* Storyboarded.swift in Sources */,
 				F46886EB275D65E5001A2A24 /* FeedMenuViewModel.swift in Sources */,
 				F41E47D42762D8A400F2286F /* StatesTableViewCell.swift in Sources */,
 				F4D95AAB276F7AC1001ED03E /* FetchStatesDataUseCase.swift in Sources */,
+				F432247B277CA97200C43478 /* CountryRepository.swift in Sources */,
 				F41E47CF2762C1EA00F2286F /* HTTPNetworkClient.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
