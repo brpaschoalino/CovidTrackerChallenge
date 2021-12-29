@@ -10,19 +10,15 @@ import PromiseKit
 
 class FetchStatesDataUseCase {
 
-    private var service = GetApiData()
+    private var service = HTTPNetworkClient.shared
 
-    func execute() {
-
-    }
-
-    func doStatesDataRequest( success: @escaping () -> Void ){
-        guard let statesDataUrl = URL(string: "https://covid19-brazil-api.now.sh/api/report/v1/brazil/20200318") else { return }
-        let urlRequest = URLRequest(url: statesDataUrl)
-
-        service.apiStatesData(url: urlRequest, success: { (data) in
-            print("Filling the data list")
-            success()
-        })
+    func execute() -> Promise<[StatesData]> {
+        let request = GetStatesRequest()
+        return service.execute(request: request).then { response -> Promise<[StatesData]> in
+            if let getStateResponse = response as? GetStatesDataResponse {
+                return Promise.value(getStateResponse.stateDataList)
+            }
+            return Promise.init(error: InfrastructureError.badConvertion)
+        }
     }
 }
