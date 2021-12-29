@@ -6,3 +6,13 @@
 //
 
 import Foundation
+
+class GetStatesRequest: Request {
+    var url: String = "https://covid19-brazil-api.now.sh/api/report/v1/brazil/20200318"
+
+    var method: HTTPMethod = .get
+
+    var responseType: Response.Type = GetStatesDataResponse.self
+
+
+}
