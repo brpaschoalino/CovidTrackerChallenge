@@ -7,6 +7,7 @@
 
 import Foundation
 import SQLite
+import PromiseKit
 
 protocol CountryRepository {
 
@@ -45,6 +46,19 @@ public class SQLCountryRepository: SQLDatabaseRepository, CountryRepository {
         } catch {
             print(error.localizedDescription)
         }
+    }
+
+    func fetchCountryData() -> Promise<[Country]> {
+        var countries = [Country]()
+        do {
+            for country in try db.prepare(tableCountries) {
+                let country = Country(id: Int(country[colId]), name: country[colName], code: country[colCode])
+                countries.append(country)
+            }
+        } catch {
+            print(error.localizedDescription)
+        }
+        return Promise.value(countries)
     }
 
 }

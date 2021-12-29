@@ -6,7 +6,7 @@
 //
 
 import Foundation
-import UIKit
+import Combine
 
 public extension Collection {
 
@@ -16,45 +16,82 @@ public extension Collection {
     }
 }
 
-class FeedMenuViewModel {
+class FeedMenuViewModel: ObservableObject {
 
-    private var countryData = [StatesData]()
-    private var fetchStatesDataUseCase: FetchStatesDataUseCase
+    let objectWillChange = PassthroughSubject<Void, Never>()
 
-    init(fetchStatesDataUseCase: FetchStatesDataUseCase = FetchStatesDataUseCase()) {
+    private var statesData = [StatesData]()
+    private var countryData = [Country]()
+
+    private var error: Error?
+
+    private let fetchStatesDataUseCase: FetchStatesDataUseCase
+    private let fetchCountriesDataUseCase: FetchCountriesUseCase
+
+    init(fetchStatesDataUseCase: FetchStatesDataUseCase = FetchStatesDataUseCase(), fetchCountriesDataUseCase: FetchCountriesUseCase = FetchCountriesUseCase()) {
         self.fetchStatesDataUseCase = fetchStatesDataUseCase
+        self.fetchCountriesDataUseCase = fetchCountriesDataUseCase
     }
 
-    func doStatesDataRequest() {
+    func loadStatesData() {
+        fetchStatesDataUseCase.execute().done { statesData in
+            self.statesData = statesData
+        }.catch { error in
+            print(error.localizedDescription)
+            self.error = error
+        }.finally {
+            self.objectWillChange.send()
+        }
+    }
 
+    func loadCountryData() {
+        fetchCountriesDataUseCase.execute().done { countryData in
+            self.countryData = countryData
+        }.catch { error in
+            print(error.localizedDescription)
+            self.error = error
+        }.finally {
+            self.objectWillChange.send()
+        }
     }
 
     func getStateUF(index: Int) -> String {
         print("Getting state uf")
-        return countryData[safe: index]?.uf ?? ""
+        return statesData[index].uf
     }
 
     func getState(index: Int) -> String {
         print("Getting state name")
-        return countryData[safe: index]?.state ?? ""
+        return statesData[index].state
     }
 
     func getStateCases(index: Int) -> Int {
         print("Getting state cases")
-        return countryData[safe: index]?.cases ?? 0
+        return statesData[index].cases
     }
 
     func getStateDeats(index: Int) -> Int {
         print("Getting state deaths")
-        return countryData[safe: index]?.deaths ?? 0
+        return statesData[index].deaths
     }
 
     func getStateSuspects(index: Int) -> Int {
         print("Getting state suspects")
-        return countryData[safe: index]?.suspects ?? 0
+        return statesData[index].suspects
     }
 
     func getCountryDataSize() -> Int {
-        return countryData.count
+        print("Getting state size")
+        return statesData.count
+    }
+
+    func getCountryName(index: Int) -> String {
+        print("Getting country name")
+        return countryData[index].name
+    }
+
+    func getCountryCode(index: Int) -> String {
+        print("Getting country code")
+        return countryData[index].code
     }
 }
