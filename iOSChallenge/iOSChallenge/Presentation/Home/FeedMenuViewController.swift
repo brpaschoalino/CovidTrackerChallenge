@@ -24,9 +24,7 @@ class FeedMenuViewController:UIViewController, Storyboarded, UITableViewDelegate
         tableView.delegate = self
         tableView.dataSource = self
 
-        viewModel?.doStatesDataRequest {
-            self.tableView.reloadData()
-        }
+        viewModel?.doStatesDataRequest()
     }
 
     override func viewWillAppear(_ animated: Bool) {

@@ -30,6 +30,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         window = UIWindow(frame: UIScreen.main.bounds)
         window?.rootViewController = navController
         window?.makeKeyAndVisible()
+
+        let database = Database()
+        let countryRepository = SQLCountryRepository(connection: database.connection)
+        countryRepository.createTable()
         return true
     }
 }

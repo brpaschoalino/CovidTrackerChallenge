@@ -19,14 +19,14 @@ public extension Collection {
 class FeedMenuViewModel {
 
     private var countryData = [StatesData]()
+    private var fetchStatesDataUseCase: FetchStatesDataUseCase
 
-    init() {
+    init(fetchStatesDataUseCase: FetchStatesDataUseCase = FetchStatesDataUseCase()) {
+        self.fetchStatesDataUseCase = fetchStatesDataUseCase
     }
 
-    private func fillStatesData(statesData: [StatesData] ) {
-        self.countryData.append(contentsOf: statesData)
+    func doStatesDataRequest() {
 
-        print("success in fetching states data")
     }
 
     func getStateUF(index: Int) -> String {
