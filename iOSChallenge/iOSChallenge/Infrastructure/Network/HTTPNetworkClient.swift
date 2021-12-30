@@ -40,9 +40,15 @@ protocol Response {
     init(data: Data?) throws
 }
 
-class HTTPNetworkClient {
+protocol NetworkClientProtocol {
+    static var shared: NetworkClientProtocol { get }
 
-    static public var shared = HTTPNetworkClient()
+    func execute(request: Request) -> Promise<Response>
+}
+
+class HTTPNetworkClient: NetworkClientProtocol {
+
+    static var shared: NetworkClientProtocol = HTTPNetworkClient()
 
     func execute(request: Request) -> Promise<Response> {
         guard let urlRequest = request.urlRequest() else { return Promise.init(error: NetworkError.badRequest)}
