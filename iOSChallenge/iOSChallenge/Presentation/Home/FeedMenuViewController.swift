@@ -9,7 +9,7 @@ import Foundation
 import UIKit
 import Combine
 
-class FeedMenuViewController:UIViewController, Storyboarded, UITableViewDelegate, UITableViewDataSource {
+class FeedMenuViewController:UIViewController, Storyboarded {
 
     weak var coordinator: MainCoordinator?
 
@@ -17,40 +17,51 @@ class FeedMenuViewController:UIViewController, Storyboarded, UITableViewDelegate
     private var cancellables: Set<AnyCancellable> = []
 
     @IBOutlet var tableView: UITableView!
-
+    @IBOutlet var pickerView: UIPickerView!
+    @IBOutlet weak var recoveredLabel: UILabel!
+    @IBOutlet weak var deathsLabel: UILabel!
+    @IBOutlet weak var countryLabel: UILabel!
+    @IBOutlet weak var caseLabel: UILabel!
+    @IBOutlet weak var confirmedLabel: UILabel!
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
         tableView.register(StatesTableViewCell.nib(), forCellReuseIdentifier: StatesTableViewCell.identifier)
-        tableView.delegate = self
         tableView.dataSource = self
+        pickerView.dataSource = self
+        pickerView.delegate = self
 
         registerObservers()
 
-        viewModel.loadStatesData()
-        viewModel.loadCountryData()
+        viewModel.loadData()
     }
 
     func registerObservers() {
         viewModel.objectWillChange.sink { [weak self] in
             guard let self = self else { return }
             self.tableView.reloadData()
+            self.setCountryDataLabel()
+            self.pickerView.reloadAllComponents()
         }.store(in: &cancellables)
     }
 
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(true)
-
-        self.tableView.reloadData()
+    func setCountryDataLabel() {
+        countryLabel.text = viewModel.getSelectedCountryName()
+        recoveredLabel.text = viewModel.getSelectedCountryRecovered()
+        deathsLabel.text = viewModel.getSelectedCountryDeaths()
+        caseLabel.text = viewModel.getSelectedCountryCases()
+        confirmedLabel.text = viewModel.getSelectedCountryConfirmed()
     }
+}
 
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return viewModel.getCountryDataSize()
-    }
-
+extension FeedMenuViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         print("inside the cell creation")
+
+        if viewModel.getStatesArraySize() == 0 {
+            return UITableViewCell()
+        }
 
         let textCell = tableView.dequeueReusableCell(withIdentifier: StatesTableViewCell.identifier,
                                                          for: indexPath) as! StatesTableViewCell
@@ -66,4 +77,28 @@ class FeedMenuViewController:UIViewController, Storyboarded, UITableViewDelegate
 
     }
 
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return viewModel.getStatesArraySize()
+    }
+}
+
+extension FeedMenuViewController: UIPickerViewDelegate {
+    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+        return viewModel.getCountryName(index: row)
+    }
+
+    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+        viewModel.setSelectedCountry(index: row)
+    }
+
+}
+
+extension FeedMenuViewController: UIPickerViewDataSource {
+    func numberOfComponents(in pickerView: UIPickerView) -> Int {
+        return 1
+    }
+
+    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+        return viewModel.getCountryArraySize()
+    }
 }

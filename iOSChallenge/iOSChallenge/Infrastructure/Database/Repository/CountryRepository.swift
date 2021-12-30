@@ -18,6 +18,7 @@ public class SQLCountryRepository: SQLDatabaseRepository, CountryRepository {
     let colId = Expression<Int64>("id")
     let colName = Expression<String>("name")
     let colCode = Expression<String>("code")
+    let colApiKey = Expression<String>("apiKey")
 
     public override init(connection: Connection) {
         super.init(connection: connection)
@@ -29,20 +30,22 @@ public class SQLCountryRepository: SQLDatabaseRepository, CountryRepository {
                 t.column(colId, primaryKey: true)
                 t.column(colName)
                 t.column(colCode, unique: true)
+                t.column(colApiKey)
             })
         } catch {
             print(error.localizedDescription)
             fatalError()
         }
-        
+
         insertToTable()
 
     }
 
     func insertToTable() {
         do {
-            try db.run(tableCountries.insert(or: .replace, colName <- "Brazil", colCode <- "br"))
-            try db.run(tableCountries.insert(or: .replace, colName <- "United States", colCode <- "us"))
+            try db.run(tableCountries.delete())
+            try db.run(tableCountries.insert(or: .replace, colName <- "Brazil", colCode <- "BR", colApiKey <- "brazil"))
+            try db.run(tableCountries.insert(or: .replace, colName <- "United States", colCode <- "US", colApiKey <- "us"))
         } catch {
             print(error.localizedDescription)
         }
@@ -52,7 +55,7 @@ public class SQLCountryRepository: SQLDatabaseRepository, CountryRepository {
         var countries = [Country]()
         do {
             for country in try db.prepare(tableCountries) {
-                let country = Country(id: Int(country[colId]), name: country[colName], code: country[colCode])
+                let country = Country(id: Int(country[colId]), name: country[colName], code: country[colCode], apiKey: country[colApiKey])
                 countries.append(country)
             }
         } catch {
