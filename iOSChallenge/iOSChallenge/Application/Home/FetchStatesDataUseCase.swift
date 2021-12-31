@@ -10,7 +10,11 @@ import PromiseKit
 
 class FetchStatesDataUseCase {
 
-    private var service = HTTPNetworkClient.shared
+    private var service: NetworkClientProtocol
+
+    public init(networkClient: NetworkClientProtocol = HTTPNetworkClient.shared) {
+        service = networkClient
+    }
 
     func execute() -> Promise<[StatesData]> {
         let request = GetStatesRequest()

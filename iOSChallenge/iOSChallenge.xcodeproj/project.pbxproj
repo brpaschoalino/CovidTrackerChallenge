@@ -52,6 +52,10 @@
 		F4CA666C2757F204008EEAA6 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4CA666A2757F204008EEAA6 /* main.swift */; };
 		F4CA666D2757F204008EEAA6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4CA666B2757F204008EEAA6 /* AppDelegate.swift */; };
 		F4D95AAB276F7AC1001ED03E /* FetchStatesDataUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4D95AAA276F7AC0001ED03E /* FetchStatesDataUseCase.swift */; };
+		F4EE225B277E2E6D006AB48C /* NetworkClientProtocolMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4EE225A277E2E6D006AB48C /* NetworkClientProtocolMock.swift */; };
+		F4EE225D277E3063006AB48C /* FetchStatesDataUseCaseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4EE225C277E3063006AB48C /* FetchStatesDataUseCaseTests.swift */; };
+		F4EE225F277E36AD006AB48C /* GetStatesDataResponseMocked.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4EE225E277E36AD006AB48C /* GetStatesDataResponseMocked.swift */; };
+		F4EE2261277E3D8E006AB48C /* GetCountryDataResponseMocked.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4EE2260277E3D8E006AB48C /* GetCountryDataResponseMocked.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -118,6 +122,10 @@
 		F4CA666B2757F204008EEAA6 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F4CA6676275A5446008EEAA6 /* XcodeGenSample.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = XcodeGenSample.entitlements; sourceTree = "<group>"; };
 		F4D95AAA276F7AC0001ED03E /* FetchStatesDataUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchStatesDataUseCase.swift; sourceTree = "<group>"; };
+		F4EE225A277E2E6D006AB48C /* NetworkClientProtocolMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkClientProtocolMock.swift; sourceTree = "<group>"; };
+		F4EE225C277E3063006AB48C /* FetchStatesDataUseCaseTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchStatesDataUseCaseTests.swift; sourceTree = "<group>"; };
+		F4EE225E277E36AD006AB48C /* GetStatesDataResponseMocked.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetStatesDataResponseMocked.swift; sourceTree = "<group>"; };
+		F4EE2260277E3D8E006AB48C /* GetCountryDataResponseMocked.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetCountryDataResponseMocked.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -411,6 +419,7 @@
 			isa = PBXGroup;
 			children = (
 				F46E38FE27739BD700808312 /* TestStatesDataRequest.swift */,
+				F4EE225C277E3063006AB48C /* FetchStatesDataUseCaseTests.swift */,
 			);
 			path = Application;
 			sourceTree = "<group>";
@@ -454,6 +463,9 @@
 			isa = PBXGroup;
 			children = (
 				F46E38FC277385BC00808312 /* StatesDataMock.swift */,
+				F4EE225A277E2E6D006AB48C /* NetworkClientProtocolMock.swift */,
+				F4EE225E277E36AD006AB48C /* GetStatesDataResponseMocked.swift */,
+				F4EE2260277E3D8E006AB48C /* GetCountryDataResponseMocked.swift */,
 			);
 			path = Mocks;
 			sourceTree = "<group>";
@@ -744,10 +756,14 @@
 				F46E39032774C05200808312 /* TableViewCellSnapShotContainer.swift in Sources */,
 				F46E38FF27739BD700808312 /* TestStatesDataRequest.swift in Sources */,
 				F41E47C827623C5A00F2286F /* ScreenSizes.swift in Sources */,
+				F4EE225D277E3063006AB48C /* FetchStatesDataUseCaseTests.swift in Sources */,
 				F41E47C927623C5E00F2286F /* BaseSnapShotTest.swift in Sources */,
 				F41E47C727623C5700F2286F /* LoginScreenTests.swift in Sources */,
+				F4EE2261277E3D8E006AB48C /* GetCountryDataResponseMocked.swift in Sources */,
+				F4EE225F277E36AD006AB48C /* GetStatesDataResponseMocked.swift in Sources */,
 				F46E39012774A0A100808312 /* FeedMenuScreenTest.swift in Sources */,
 				F46E38FD277385BC00808312 /* StatesDataMock.swift in Sources */,
+				F4EE225B277E2E6D006AB48C /* NetworkClientProtocolMock.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

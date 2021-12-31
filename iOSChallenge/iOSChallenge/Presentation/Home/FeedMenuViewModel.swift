@@ -64,29 +64,6 @@ class FeedMenuViewModel: ObservableObject {
 
     }
 
-//    func loadStatesData() {
-//        fetchStatesDataUseCase.execute().done { statesData in
-//            self.statesData = statesData
-//        }.catch { error in
-//            print(error.localizedDescription)
-//            self.error = error
-//        }.finally {
-//            self.objectWillChange.send()
-//        }
-//    }
-//
-//    func loadCountriesData() {
-//        fetchCountriesDataUseCase.execute().done { countriesData in
-//            self.countriesData = countriesData
-//        }.catch { error in
-//            print(error.localizedDescription)
-//            self.error = error
-//        }.finally {
-//            self.objectWillChange.send()
-//            self.loadCountryData()
-//        }
-//    }
-
     func loadCountryData() {
 
         fetchCountryDataUseCase.execute(country: getCountryApiKey(index: selectedCountry)).done { countryData in
